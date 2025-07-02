@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admission - Fondation TAFI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    h1, h2 {
+      color: #145DA0;
+    }
+    section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin-top: 10px;
+    }
+    .highlight {
+      color: #0c4b8e;
+      font-weight: bold;
+    }
+    .faq {
+      background: #eef4fb;
+      padding: 15px;
+      border-left: 5px solid #145DA0;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Fondation TAFI</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="programs.html">Programmes</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="payment.html" class="btn">Payer la pension</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h1>📝 Admission à la Fondation TAFI</h1><br>
+
+  <section>
+    <h2>🎯 Conditions d'Admission</h2>
+    <p>La Fondation TAFI accueille des élèves de tous horizons, motivés par la réussite scolaire et sportive. L’admission est ouverte aux enfants :</p>
+    <ul>
+      <li>Agés de 4 à 16 ans</li>
+      <li>Ayant une bonne condition physique</li>
+      <li>Avec un intérêt manifeste pour le sport</li>
+      <li>Capables de suivre un enseignement bilingue (FR/EN)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📋 Procédure d'inscription</h2>
+    <p>Pour intégrer la Fondation TAFI, suivez les étapes ci-dessous :</p>
+    <ul>
+      <li>Remplir le <span class="highlight">formulaire d’inscription</span> en ligne ou à l’école</li>
+      <li>Fournir les pièces demandées (voir ci-dessous)</li>
+      <li>Passer un test d’évaluation (académique et sportif)</li>
+      <li>Rencontrer le comité d’admission avec le parent ou tuteur</li>
+      <li>Recevoir la lettre d’admission et valider l'inscription par le paiement</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📑 Pièces à fournir</h2>
+    <ul>
+      <li>Photocopie de l’acte de naissance</li>
+      <li>Photocopie du dernier bulletin scolaire</li>
+      <li>Certificat médical d’aptitude sportive</li>
+      <li>2 photos d’identité récentes</li>
+      <li>Lettre de motivation (optionnelle pour les plus jeunes)</li>
+    </ul>
+  </section>
+  <section>
+    <h2>💰 Frais d'inscription et scolarité</h2>
+    <p>Les frais varient selon le niveau d’étude et le régime (internat ou externat).</p>
+    <ul>
+      <li><strong>Frais d'inscription :</strong> à partir de 25 000 FCFA</li>
+      <li><strong>Frais de scolarité :</strong> à partir de 100 000 FCFA/trimestre</li>
+      <li><strong>Pension complète :</strong> disponible en option</li>
+      <li>Paiement en ligne possible via Mobile Money (MTN/Orange) ou carte bancaire</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>❓ Questions fréquentes (FAQ)</h2>
+    <div class="faq">
+      <strong>Q : Est-il obligatoire d’avoir un bon niveau sportif ?</strong><br>
+      R : Non. La motivation, l’engagement et le potentiel comptent plus que le niveau actuel.
+    </div>
+    <div class="faq">
+      <strong>Q : Puis-je inscrire mon enfant en cours d’année ?</strong><br>
+      R : Oui, si des places sont disponibles et que les tests sont validés.
+    </div>
+    <div class="faq">
+      <strong>Q : Y a-t-il des bourses disponibles ?</strong><br>
+      R : Oui. Des bourses peuvent être attribuées aux élèves méritants ou en situation modeste.
+    </div>
+  </section>
+
+  <section>
+    <h2>📞 Contact & Rendez-vous</h2>
+    <p>Pour toute information complémentaire, prise de rendez-vous ou assistance pour l’inscription :</p>
+    <ul>
+      <li>Remplissez le formulaire de contact sur notre site</li>
+      <li>Visitez notre campus à Mbankomo</li>
+      <li>Horaires d’accueil : du lundi au samedi, de 8h à 16h</li>
+    </ul>
+  </section>
+
+    <h2>Demande d'admission</h2>
+    <p>Remplissez le formulaire ci-dessous pour soumettre une demande d’admission à la Fondation TAFI.</p><br>
+
+    <form id="admission-form" action="#" method="post">
+      <label for="nom">Nom complet :</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="age">Âge :</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="sport">Discipline souhaitée :</label>
+      <select id="sport" name="sport" required>
+        <option value="">--Choisissez--</option>
+        <option value="football">Football</option>
+        <option value="basketball">Basketball</option>
+        <option value="athletisme">Athlétisme</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <label for="niveau">Niveau scolaire actuel :</label>
+      <input type="text" id="niveau" name="niveau" required>
+
+      <label for="parent">Nom du parent / tuteur :</label>
+      <input type="text" id="parent" name="parent" required>
+
+      <label for="contact">Téléphone du parent :</label>
+      <input type="tel" id="contact" name="contact" required>
+
+      <button type="submit" class="btn-primary">Soumettre</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Fondation TAFI - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

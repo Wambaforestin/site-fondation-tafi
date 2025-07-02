@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie - Fondation TAFI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #145DA0;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-buttons button {
+      background: #145DA0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .gallery-item {
+      width: 30%;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+
+    @media screen and (max-width: 768px) {
+      .gallery-item {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Fondation TAFI</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="programs.html">Programmes</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="payment.html" class="btn">Payer la pension</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h1>📸 Galerie Fondation TAFI</h1><br>
+
+  <!-- Boutons de filtre -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">Tout</button>
+    <button onclick="filterImages('football')">Football</button>
+    <button onclick="filterImages('internat')">Internat</button>
+    <button onclick="filterImages('evenement')">Événements</button>
+  </div>
+
+  <!-- Galerie -->
+  <div class="gallery" id="gallery">
+    <div class="gallery-item football">
+      <a href="#photo1"><img src="images/photo1.jpg" alt="Football 1"></a>
+      <a href="#photo2"><img src="images/photo2.jpg" alt="Football 1"></a>
+      <a href="#Photo3"><img src="images/photo3.jpg" alt="Football 1"></a>
+      <a href="#photo4"><img src="images/photo4.jpg" alt="Football 1"></a>
+    </div>
+    <div class="gallery-item evenement">
+      <a href="#photo2"><img src="images/photo2.jpg" alt="Événement 2"></a>
+      <a href="#Photo3"><img src="images/photo3.jpg" alt="Événement 2"></a>
+      <a href="#photo4"><img src="images/photo4.jpg" alt="Événement 2"></a>
+    </div>
+    <div class="gallery-item internat">
+      <a href="#photo51"><img src="images/photo51.jpg" alt="Internat 1"></a>
+      <a href="#photo52"><img src="images/photo52.jpg" alt="Internat 2"></a>
+      <a href="#photo53"><img src="images/photo53.jpg" alt="Internat 3"></a>
+      <a href="#photo54"><img src="images/photo54.jpg" alt="Internat 4"></a>
+   
+    </div>
+    <div class="gallery-item football">
+      <a href="#photo21"><img src="images/photo21.jpg" alt="Football 2"></a>
+      <a href="#photo22"><img src="images/photo22.jpg" alt="Football 3"></a>
+      <a href="#hero1"><img src="images/hero1.jpg" alt="Football 4"></a>
+      <a href="#hero2"><img src="images/hero2.jpg" alt="Football 5"></a>
+
+    </div>
+    <div class="gallery-item evenement">
+      <a href="#photo32"><img src="images/photo32.jpg" alt="Événement 2"></a>
+      <a href="#photo33"><img src="images/photo33.jpg" alt="Événement 2"></a>
+      <a href="#photo34"><img src="images/photo34.jpg" alt="Événement 2"></a>
+      <a href="#photo35"><img src="images/photo35.jpg" alt="Événement 2"></a>
+      
+    </div>
+    <div class="gallery-item internat">
+      <a href="#photo26"><img src="images/photo26.jpg" alt="Internat 2"></a>
+      <a href="#photo27"><img src="images/photo27.jpg" alt="Internat 2"></a>
+      <a href="#photo28"><img src="images/photo28.jpg" alt="Internat 2"></a>
+      <a href="#photo29"><img src="images/photo29.jpg" alt="Internat 2"></a>
+    </div>
+  </div>
+
+  <!-- Lightboxes -->
+  <div class="lightbox" id="photo1"><img src="images/photo1.jpg" alt=""></div>
+  <div class="lightbox" id="photo2"><img src="images/photo2.jpg" alt=""></div>
+  <div class="lightbox" id="Photo3"><img src="images/photo3.jpg" alt=""></div>
+  <div class="lightbox" id="photo4"><img src="imagges/photo4.jpg" alt=""></div>
+  <div class="lightbox" id="photo5"><img src="images/photo5.jpg" alt=""></div>
+  <div class="lightbox" id="photo6"><img src="images/photo6.jpg" alt=""></div>
+
+  <script>
+    function filterImages(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+    <h2>Galerie Photos</h2>
+    <div class="gallery-grid">
+      <img src="images/photo1.jpg" alt="Photo 1" width="15%">
+      <img src="images/photo2.jpg" alt="Photo 2"width="5%">
+      <img src="images/photo3.jpg" alt="Photo 3"width="15%">
+      <img src="images/photo4.jpg" alt="Photo 4"width="15%">
+      <img src="images/photo5.jpg" alt="Photo 5"width="15%">
+      <img src="images/photo6.jpg" alt="Photo 6"width="15%">
+      <img src="images/photo7.jpg" alt="Photo 7"width="15%">
+      <img src="images/photo8.jpg" alt="Photo 8"width="15%">
+      <img src="images/photo9.jpg" alt="Photo 9"width="15%">
+      <img src="images/photo10.jpg" alt="Photo 10"width="15%">
+      <img src="images/photo11.jpg" alt="Photo 11"width="15%">
+      <img src="images/photo12.jpg" alt="Photo 12"width="15%">
+      <img src="images/photo13.jpg" alt="Photo 13"width="15%">
+      <img src="images/photo14.jpg" alt="Photo 14"width="15%">
+      <img src="images/photo15.jpg" alt="Photo 15"width="15%">
+      <img src="images/photo16.jpg" alt="Photo 16"width="15%">
+      <img src="images/photo17.jpg" alt="Photo 17"width="15%">
+      <img src="images/photo18.jpg" alt="Photo 18"width="15%">
+      <img src="images/photo19.jpg" alt="Photo 19"width="15%">
+      <img src="images/photo20.jpg" alt="Photo 20"width="15%">
+      <img src="images/photo21.jpg" alt="Photo 21"width="15%">
+      <img src="images/photo22.jpg" alt="Photo 22"width="15%">
+      <img src="images/photo23.jpg" alt="Photo 23"width="15%">
+      <img src="images/photo24.jpg" alt="Photo 24"width="15%">
+      <img src="images/photo25.jpg" alt="Photo 25"width="15%">
+      <img src="images/photo26.jpg" alt="Photo 26"width="15%">
+      <img src="images/photo27.jpg" alt="Photo 27"width="15%">
+      <img src="images/photo28.jpg" alt="Photo 28"width="15%">
+      <img src="images/photo29.jpg" alt="Photo 29"width="15%">
+      <img src="images/photo30.jpg" alt="Photo 30"width="15%">
+      <img src="images/photo31.jpg" alt="Photo 31"width="15%">
+      <img src="images/photo32.jpg" alt="Photo 32"width="15%">
+      <img src="images/photo33.jpg" alt="Photo 33"width="15%">
+      <img src="images/photo34.jpg" alt="Photo 34"width="15%">
+      <img src="images/photo35.jpg" alt="Photo 35"width="15%">
+      <img src="images/photo36.jpg" alt="Photo 36"width="15%">
+      <img src="images/photo37.jpg" alt="Photo 37"width="15%">
+      <img src="images/photo38.jpg" alt="Photo 38"width="15%">
+      <img src="images/photo39.jpg" alt="Photo 39"width="15%">
+      <img src="images/photo40.jpg" alt="Photo 40"width="15%">
+      <img src="images/photo41.jpg" alt="Photo 41"width="15%">
+      <img src="images/photo42.jpg" alt="Photo 42"width="15%">
+      <img src="images/photo43.jpg" alt="Photo 43"width="15%">
+      <img src="images/photo44.jpg" alt="Photo 44"width="15%">
+      <img src="images/photo45.jpg" alt="Photo 45"width="15%">
+      <img src="images/photo46.jpg" alt="Photo 46"width="15%">
+      <img src="images/photo47.jpg" alt="Photo 47"width="15%">
+      <img src="images/photo48.jpg" alt="Photo 48"width="15%">
+      <img src="images/photo49.jpg" alt="Photo 49"width="15%">
+      <img src="images/photo50.jpg" alt="Photo 50"width="15%">
+      <img src="images/photo51.jpg" alt="Photo 51"width="15%">
+      <img src="images/photo52.jpg" alt="Photo 52"width="15%">
+      <img src="images/photo53.jpg" alt="Photo 53"width="15%">
+      <img src="images/photo54.jpg" alt="Photo 54"width="15%">
+      <img src="images/photo55.jpg" alt="Photo 55"width="15%">
+      <img src="images/photo56.jpg" alt="Photo 56"width="15%">
+      <img src="images/photo57.jpg" alt="Photo 57"width="15%">
+      <img src="images/photo58.jpg" alt="Photo 58"width="15%">
+      <img src="images/photo59.jpg" alt="Photo 59"width="15%">
+      <img src="images/photo60.jpg" alt="Photo 60"width="15%">
+      <img src="images/photo61.jpg" alt="Photo 61"width="15%">
+      <img src="images/photo62.jpg" alt="Photo 62"width="15%">
+      <img src="images/photo63.jpg" alt="Photo 63"width="15%">
+      <img src="images/photo64.jpg" alt="Photo 64"width="15%">
+    
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Fondation TAFI - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

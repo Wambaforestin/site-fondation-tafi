@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fondation TAFI - Sport & Études</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+  <header>
+    <div class="container">
+      <h1>FONDATION TAFI</h1>
+      <style>
+        .logo-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 16vh;
+          
+        }
+        .logo-container img {
+          width: 100px;
+          height: auto;
+        }
+         /* Image de fond floue */
+         .background {
+            background: url('images/hero1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(2px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Met l’image derrière le contenu */
+        }
+
+        /* Conteneur avec fond blanc semi-transparent */
+        .content {
+            background-color: rgba(255, 255, 255, 0.8); /* Blanc avec transparence */
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            margin: 100px auto;
+        }
+
+
+      </style>
+      <div class="background"></div>
+      <div class="logo-container"> 
+      <img src="images/logo.png1.jpg" alt="Logo Fondation Tafi">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="programs.html">Programmes</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="payment.html" class="btn">Payer la pension</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Sport et Excellence Académique</h2><br>
+       <p>Bienvenue à la C.B. Fondation Tafi Academy
+        Une école bilingue offrant l'enseignement primaire et secondaire, avec internat et externat disponibles.</p>
+      <p> Un centre de formation unique au Cameroun dédié à la réussite scolaire et sportive des jeunes talents.</p><br>
+      <a href="admission.html" class="btn-primary">Demander une admission</a>
+    </div>
+  </section>
+  <section class="features">
+    <div class="feature">
+      <h3>Formation Sportive</h3>
+      <p>Football, athlétisme, basketball et plus encore avec des encadreurs expérimentés.</p>
+    </div>
+    <div class="feature">
+      <h3>Éducation de Qualité</h3>
+      <p>Un programme scolaire complet reconnu par l’État.</p>
+    </div>
+    <div class="feature">
+      <h3>Encadrement Global</h3>
+      <p>Suivi psychologique, médical et éducatif personnalisé.</p>
+    </div>
+  </section>
+ 
+  <footer>
+    <p>© 2025 Fondation TAFI - Tous droits réservés</p>
+  </footer>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
