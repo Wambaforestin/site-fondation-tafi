@@ -7,8 +7,9 @@ function toggleMobileMenu() {
     navbar.classList.toggle('active');
 }
 
-// Close mobile menu when clicking on a link
+// DOMContentLoaded Event Handler
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Functionality
     const navLinks = document.querySelectorAll('nav ul li a');
     const navbar = document.getElementById('navbar');
     
@@ -47,4 +48,149 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScrollTop = scrollTop;
     });
+
+    // Initialize Hero Carousel
+    initHeroCarousel();
+
+    // Animation on scroll
+    initScrollAnimations();
+
+    // Smooth scroll for anchor links
+    initSmoothScroll();
 });
+
+// Hero Carousel Functionality
+function initHeroCarousel() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    let autoPlayInterval = null;
+    const autoPlayDelay = 4000; // 4 seconds - faster auto rotation
+
+    // Show specific slide
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current slide and indicator
+        if (slides[index]) {
+            slides[index].classList.add('active');
+        }
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
+
+        currentSlide = index;
+    }
+
+    // Go to specific slide
+    function goToSlide(index) {
+        stopAutoPlay();
+        showSlide(index);
+        // Restart autoplay immediately after manual navigation
+        setTimeout(() => startAutoPlay(), 500);
+    }
+
+    // Next slide
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    // Previous slide
+    function previousSlide() {
+        const prevIndex = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+        showSlide(prevIndex);
+    }
+
+    // Start autoplay
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayInterval = setInterval(() => {
+            nextSlide();
+        }, autoPlayDelay);
+    }
+
+    // Stop autoplay
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+
+    // Initialize carousel
+    showSlide(0);
+
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    // Start autoplay immediately
+    startAutoPlay();
+
+    // Optional: Pause on hover (you can remove this if you want continuous auto-rotation)
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        heroSection.addEventListener('mouseenter', () => stopAutoPlay());
+        heroSection.addEventListener('mouseleave', () => startAutoPlay());
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            goToSlide(currentSlide === 0 ? slides.length - 1 : currentSlide - 1);
+        } else if (e.key === 'ArrowRight') {
+            goToSlide((currentSlide + 1) % slides.length);
+        }
+    });
+}
+
+// Smooth scroll for anchor links
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Animation on scroll
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.feature-card, .stat-item, .program-item');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
