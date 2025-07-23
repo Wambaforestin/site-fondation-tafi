@@ -4,30 +4,63 @@
   <meta charset="UTF-8">
   <title>Galerie - Fondation TAFI</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      color: #145DA0;
-    }
-    .filter-buttons {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .filter-buttons button {
-      background: #145DA0;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      margin: 5px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.png.jpg" alt="Logo Fondation TAFI" onerror="this.style.display='none'">
+        <div>
+          <h1>Fondation TAFI</h1>
+          <div class="tagline">Excellence • Sport • Éducation</div>
+        </div>
+      </div>
+      
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="programs.html">Programmes</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="payment.html" class="btn">Payer la pension</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="container">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f9f9f9;
+      }
+      h1 {
+        text-align: center;
+        color: #145DA0;
+      }
+      .filter-buttons {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .filter-buttons button {
+        background: #145DA0;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        margin: 5px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -76,25 +109,6 @@
       }
     }
   </style>
-
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Fondation TAFI</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="programs.html">Programmes</a></li>
-          <li><a href="admission.html">Admission</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="payment.html" class="btn">Payer la pension</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
   <section class="container">
     <h1>📸 Galerie Fondation TAFI</h1><br>
@@ -245,5 +259,8 @@
   <footer>
     <p>© 2025 Fondation TAFI - Tous droits réservés</p>
   </footer>
+  
+  <script src="js/main.js"></script>
 </body>
+</html>
 </html>
