@@ -112,26 +112,9 @@ Authentification: Supabase Auth
 Paiements: Orange Money / MTN Mobile Money (méthode de paiement locale)
 ```
 
-## Contribution
-
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. Fork le projet
-2. Créer une branche (`git checkout -b feature/nouvelle-fonctionnalite`)
-3. Commit les changements (`git commit -m 'Ajout nouvelle fonctionnalité'`)
-4. Push vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
-5. Ouvrir une Pull Request
-
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## Contact
-
-**Fondation TAFI Academy**
-
-- **Site Web**: [fondation-tafi-cameroun.web.app](https://fondation-tafi-cameroun.web.app/)
-- **Adresse**: Rue de la CAF, Mbankomo, Yaoundé, Cameroun
 
 ---
 
