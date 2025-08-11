@@ -9,7 +9,7 @@
 
 ## À Propos
 
-La **Fondation TAFI Academy** est une organisation à but non lucratif dédiée au développement des jeunes talents à travers l'excellence sportive et académique. Située au Cameroun, notre centre de formation sport-études offre un environnement unique pour former la prochaine génération de leaders.
+La **Fondation TAFI Academy** est une école dédiée au développement des jeunes talents à travers l'excellence sportive et académique. Située au Cameroun principalement à Yaoundé-Mbankomo, notre centre de formation sport-études offre un environnement unique pour former la prochaine génération de leaders.
 
 ### Informations de l'Organisation
 
@@ -41,7 +41,7 @@ La **Fondation TAFI Academy** est une organisation à but non lucratif dédiée 
 - **Contact**: Informations de contact et formulaire
 - **Paiement**: Section pour les frais de pension
 
-### Technologies Utilisées
+### Technologies Utilisées (initiales utilisées)
 
 - **Frontend**: HTML5, CSS3 (Grid/Flexbox), JavaScript (ES6+)
 - **Icons**: Font Awesome 6.0.0
