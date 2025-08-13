@@ -4132,6 +4132,30 @@
   background: white;
 }
 
+.map-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.map-section .section-header h2 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.map-section .section-header h2 .highlight {
+  color: #ff9900;
+}
+
+.map-section .section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 .map-container {
   position: relative;
   margin-top: 50px;
