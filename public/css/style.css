@@ -3960,16 +3960,16 @@
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-.form-card h3 {
+.form-card h5 {
   color: #003366;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.form-card h3 i {
+.form-card h5 i {
   color: #ff9900;
 }
 
