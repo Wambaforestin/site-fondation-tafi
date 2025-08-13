@@ -247,3 +247,140 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Gallery functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing code...
+    
+    // Gallery Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter gallery items
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                
+                if (filter === 'all' || category === filter) {
+                    item.classList.remove('hide');
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                    item.classList.add('hide');
+                }
+            });
+        });
+    });
+    
+    // Load More Functionality
+    let visibleItems = 12;
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    
+    function showMoreItems() {
+        const hiddenItems = Array.from(galleryItems).slice(visibleItems, visibleItems + 6);
+        hiddenItems.forEach(item => {
+            item.style.display = 'block';
+        });
+        visibleItems += 6;
+        
+        if (visibleItems >= galleryItems.length) {
+            loadMoreBtn.style.display = 'none';
+        }
+    }
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', showMoreItems);
+        
+        // Initially hide items beyond the first 12
+        galleryItems.forEach((item, index) => {
+            if (index >= 12) {
+                item.style.display = 'none';
+            }
+        });
+    }
+});
+
+// Lightbox functionality
+let currentImageIndex = 0;
+const allImages = [];
+
+// Collect all images for navigation
+document.querySelectorAll('.gallery-item img').forEach((img, index) => {
+    allImages.push({
+        src: img.src,
+        alt: img.alt,
+        title: img.nextElementSibling?.querySelector('h4')?.textContent || img.alt,
+        description: img.nextElementSibling?.querySelector('p')?.textContent || ''
+    });
+});
+
+function openLightbox(src, title, description = '') {
+    const modal = document.getElementById('lightboxModal');
+    const image = document.getElementById('lightboxImage');
+    const titleElement = document.getElementById('lightboxTitle');
+    const descElement = document.getElementById('lightboxDescription');
+    
+    // Find current image index
+    currentImageIndex = allImages.findIndex(img => img.src === src);
+    
+    image.src = src;
+    image.alt = title;
+    titleElement.textContent = title;
+    descElement.textContent = description;
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function previousImage() {
+    currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+    updateLightboxImage();
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % allImages.length;
+    updateLightboxImage();
+}
+
+function updateLightboxImage() {
+    const currentImage = allImages[currentImageIndex];
+    const image = document.getElementById('lightboxImage');
+    const titleElement = document.getElementById('lightboxTitle');
+    const descElement = document.getElementById('lightboxDescription');
+    
+    image.src = currentImage.src;
+    image.alt = currentImage.alt;
+    titleElement.textContent = currentImage.title;
+    descElement.textContent = currentImage.description;
+}
+
+// Close lightbox with escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+        previousImage();
+    } else if (e.key === 'ArrowRight') {
+        nextImage();
+    }
+});
+
+// Close lightbox when clicking outside the image
+document.getElementById('lightboxModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
