@@ -1244,48 +1244,348 @@
     flex-shrink: 0;
   }
   
-  /* Programs Page Styles */
+ /* Programs Overview Section */
 .programs-overview {
-  padding: 60px 0;
+  padding: 80px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.programs-stats {
+.programs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
 }
 
-.stat-card {
+.program-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.program-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #003366, #004080);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover .program-icon {
+  transform: scale(1.1);
+}
+
+.program-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.program-card h4 {
+  color: #003366;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.program-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Infrastructure Section */
+.infrastructure {
+  padding: 80px 0;
+  background: white;
+}
+
+.infrastructure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.infra-item {
   background: white;
   padding: 30px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid #f0f0f0;
 }
 
-.stat-card:hover {
+.infra-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #ff9900;
 }
 
-.stat-card i {
+.infra-item i {
   font-size: 3rem;
   color: #ff9900;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.infra-item h5 {
+  color: #003366;
+  font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
-.stat-card h3 {
-  font-size: 2rem;
-  color: #003366;
-  margin-bottom: 10px;
+.infra-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
-.stat-card p {
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.testimonial-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff9900, #ffb347);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.testimonial-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.testimonial-author {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.testimonial-author strong {
+  color: #003366;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.testimonial-author span {
   color: #666;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Goals Section */
+.goals-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.goal-item {
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.goal-item:hover {
+  border-color: #ff9900;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.goal-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #003366, #004080);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.goal-item h5 {
+  color: #003366;
+  font-size: 1.2rem;
+  margin: 25px 0 15px;
+}
+
+.goal-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+}
+
+.team-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.team-description p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+  .about-content {
+    margin-top: 60px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .content-grid,
+  .programs-grid,
+  .infrastructure-grid,
+  .testimonials-grid,
+  .goals-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .history-highlight {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+  
+  .message-card {
+    padding: 30px 25px;
+  }
+  
+  .content-card,
+  .program-card,
+  .infra-item,
+  .testimonial-card,
+  .goal-item {
+    padding: 25px 20px;
+  }
+  
+  .lead-text {
+    font-size: 1.1rem;
+  }
+  
+  .team-description p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .content-card,
+  .program-card,
+  .infra-item,
+  .testimonial-card,
+  .goal-item {
+    padding: 20px 15px;
+  }
+  
+  .history-highlight {
+    padding: 20px;
+  }
+  
+  .message-card {
+    padding: 25px 20px;
+  }
+  
+  .lead-text {
+    font-size: 1rem;
+  }
+  
+  .team-description p {
+    font-size: 1rem;
+  }
+  
+  .card-icon,
+  .program-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card-icon i,
+  .program-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .infra-item i {
+    font-size: 2.5rem;
+  }
 }
 
 /* Academic Programs */
