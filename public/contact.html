@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - Fondation TAFI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fondation TAFI Academy</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -36,105 +37,263 @@
       </nav>
     </div>
   </header>
-  
-  <section class="container">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        padding: 20px;
-        color: #222;
-      }
-      h1, h2 {
-        color: #145DA0;
-      }
-      section {
-        background: #fff;
-        margin-bottom: 40px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      }
-      .contact-info li {
-        margin-bottom: 8px;
-      }
-      form input, form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    form button {
-      background-color: #145DA0;
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    form button:hover {
-      background-color: #0d3f75;
-    }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-  
-  </style>
 
-  <section class="container">
-    <h1>📞 Contactez la Fondation TAFI</h1><br>
+  <!-- Page Hero Section -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('images/photo19.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="page-title">
+        <span class="highlight">Contactez-nous</span>
+      </h1>
+      <p class="page-subtitle">
+        Notre équipe est là pour vous aider dans toutes vos démarches
+      </p>
+    </div>
 
-  <section>
-    <h2>📍 Nos Coordonnées</h2>
-    <ul class="contact-info">
-      <li><strong>Adresse :</strong> Mbankomo,Agon 1, Yaoundé, Cameroun</li>
-      <li><strong>Horaires :</strong> Lundi - Samedi : 8h00 - 16h00</li>
-      <li><strong>Formulaire :</strong> Disponible ci-dessous</li>
-      <li><strong>Email :</strong> Contact@fondationtafi.org</li>
-    </ul>
   </section>
 
-  <section>
-    <h2>📨 Formulaire de Contact</h2>
-    <form action="traitement-formulaire.php" method="POST">
-      <label for="nom">Nom complet :</label>
-      <input type="text" id="nom" name="nom" required>
-
-      <label for="email">Adresse e-mail :</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Votre message :</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
+  <!-- Contact Introduction -->
+  <section class="contact-intro">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contactez <span class="highlight">notre équipe</span></h2>
+        <p>Notre équipe dédiée est disponible pour vous accompagner dans vos démarches</p>
+      </div>
+      
+      <div class="contact-methods">
+        <div class="method-card">
+          <div class="method-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Par Téléphone</h3>
+          <p>Appelez-nous directement</p>
+          <a href="tel:+237XXXXXXXX" class="method-link">+237 XX XX XX XX</a>
+        </div>
+        
+        <div class="method-card">
+          <div class="method-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Par Email</h3>
+          <p>Écrivez-nous un message</p>
+          <a href="mailto:contact@fondationtafi.cm" class="method-link">contact@fondationtafi.cm</a>
+        </div>
+        
+        <div class="method-card">
+          <div class="method-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>Messagerie instantanée</p>
+          <a href="https://wa.me/237XXXXXXXX" class="method-link">Nous écrire</a>
+        </div>
+        
+        <div class="method-card">
+          <div class="method-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Nous Rendre Visite</h3>
+          <p>Rencontrez notre équipe</p>
+          <span class="method-link">Mbankomo, Yaoundé</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>🗺 Localisation sur la carte</h2>
-    <p>Voici notre emplacement sur Google Maps :</p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.576369364239!2d11.411145!3d3.727678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf6b6e53f30b%3A0x1234567890abcdef!2sMbankomo%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1680000000000"
-      allowfullscreen=""
-      loading="lazy"
-      ></iframe>
-    </section>
+  <!-- Contact Information & Form -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Information -->
+        <div class="contact-info-section">
+          <div class="info-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Notre Adresse</h3>
+            <div class="info-content">
+              <p><strong>Fondation TAFI Academy</strong></p>
+              <p>Mbankomo, Agon 1</p>
+              <p>Yaoundé, Cameroun</p>
+              <p>Région du Centre</p>
+            </div>
+          </div>
 
+          <div class="info-card">
+            <h3><i class="fas fa-clock"></i> Horaires d'Ouverture</h3>
+            <div class="info-content">
+              <div class="schedule-item">
+                <span>Lundi - Vendredi</span>
+                <span>7h30 - 17h00</span>
+              </div>
+              <div class="schedule-item">
+                <span>Samedi</span>
+                <span>8h00 - 16h00</span>
+              </div>
+              <div class="schedule-item">
+                <span>Dimanche</span>
+                <span>Fermé</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-user-tie"></i> Contacts Spécialisés</h3>
+            <div class="info-content">
+              <div class="contact-person">
+                <strong>Admission & Inscriptions</strong>
+                <p><i class="fas fa-envelope"></i> admission@fondationtafi.cm</p>
+                <p><i class="fas fa-phone"></i> +237 XX XX XX XX</p>
+              </div>
+              <div class="contact-person">
+                <strong>Direction Académique</strong>
+                <p><i class="fas fa-envelope"></i> academique@fondationtafi.cm</p>
+                <p><i class="fas fa-phone"></i> +237 XX XX XX XX</p>
+              </div>
+              <div class="contact-person">
+                <strong>Direction Sportive</strong>
+                <p><i class="fas fa-envelope"></i> sport@fondationtafi.cm</p>
+                <p><i class="fas fa-phone"></i> +237 XX XX XX XX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+          <div class="form-card">
+            <h3><i class="fas fa-paper-plane"></i> Envoyez-nous un Message</h3>
+            <form class="contact-form" id="contactForm" action="#" method="POST">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">Prénom *</label>
+                  <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Nom *</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Téléphone</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Sujet de votre message *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Choisissez un sujet</option>
+                  <option value="admission">Demande d'admission</option>
+                  <option value="information">Demande d'information</option>
+                  <option value="visite">Planifier une visite</option>
+                  <option value="academique">Questions académiques</option>
+                  <option value="sportif">Programme sportif</option>
+                  <option value="pension">Paiement pension</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Votre Message *</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre demande en détail..."></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" id="newsletter">
+                  <span class="checkmark"></span>
+                  J'accepte de recevoir des informations sur les actualités de la Fondation TAFI
+                </label>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label consent">
+                  <input type="checkbox" name="privacy" id="privacy" required>
+                  <span class="checkmark"></span>
+                  J'accepte la <a href="#" target="_blank">politique de confidentialité</a> et le traitement de mes données personnelles *
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-submit">
+                  <i class="fas fa-paper-plane"></i>
+                  Envoyer le Message
+                </button>
+                <button type="reset" class="btn-reset">
+                  <i class="fas fa-undo"></i>
+                  Réinitialiser
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Notre <span class="highlight">Localisation</span></h2>
+        <p>Retrouvez-nous facilement grâce à cette carte interactive</p>
+      </div>
+      
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.576369364239!2d11.411145!3d3.727678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf6b6e53f30b%3A0x1234567890abcdef!2sMbankomo%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1680000000000"
+          allowfullscreen=""
+          loading="lazy"
+          title="Localisation Fondation TAFI Academy">
+        </iframe>
+        <div class="map-overlay">
+          <div class="location-card">
+            <h4><i class="fas fa-map-marker-alt"></i> Fondation TAFI Academy</h4>
+            <p>Mbankomo, Agon 1, Yaoundé</p>
+            <a href="https://maps.google.com/directions" target="_blank" class="directions-btn">
+              <i class="fas fa-directions"></i>
+              Obtenir l'itinéraire
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Prêt à rejoindre la <span class="highlight">famille TAFI</span> ?</h2>
+        <p>Notre équipe d'admission vous accompagne dans votre démarche d'inscription</p>
+        <div class="cta-buttons">
+          <a href="admission.html" class="btn-cta primary">
+            <i class="fas fa-graduation-cap"></i>
+            Processus d'admission
+          </a>
+          <a href="programs.html" class="btn-cta secondary">
+            <i class="fas fa-book"></i>
+            Découvrir nos programmes
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <div class="footer-logo">
-          <img src="images/logo.png.jpg" alt="Logo Fondation TAFI" onerror="this.style.display='none'">
+          <img src="images/logo.png1.jpg" alt="Logo Fondation TAFI" onerror="this.style.display='none'">
           <h4>Fondation TAFI</h4>
         </div>
         <p>Une Association éducative et sportive pour le développement des jeunes talents.</p>
@@ -173,7 +332,7 @@
         <h3>Contact</h3>
         <div class="contact-info">
           <i class="fas fa-map-marker-alt"></i>
-          <p>Cameroun - Région du Centre</p>
+          <p>Mbankomo, Agon 1, Yaoundé</p>
         </div>
         <div class="contact-info">
           <i class="fas fa-phone"></i>
