@@ -1244,65 +1244,168 @@
     flex-shrink: 0;
   }
   
- /* Programs Overview Section */
+/* =================================================================
+   PROGRAMS PAGE - Excellence à tous les niveaux Section
+   ================================================================= */
+
+/* Programs Overview Section */
 .programs-overview {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.programs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  margin-top: 50px;
-}
-
-.program-card {
   background: white;
-  padding: 40px 30px;
-  border-radius: 20px;
+}
+
+.programs-overview .section-header {
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 60px;
 }
 
-.program-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.program-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #003366, #004080);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 25px;
-  transition: transform 0.3s ease;
-}
-
-.program-card:hover .program-icon {
-  transform: scale(1.1);
-}
-
-.program-icon i {
-  font-size: 2rem;
-  color: white;
-}
-
-.program-card h4 {
+.programs-overview .section-header h2 {
+  font-size: 2.5rem;
   color: #003366;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
-.program-card p {
+.programs-overview .section-header h2 .highlight {
+  color: #ff9900;
+}
+
+.programs-overview .section-header p {
+  font-size: 1.2rem;
   color: #666;
+  max-width: 600px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
+/* Programs Stats Grid */
+.programs-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.programs-stats .stat-card {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.programs-stats .stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-color: #ff9900;
+}
+
+.programs-stats .stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #003366, #004080);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.programs-stats .stat-card:hover::before {
+  opacity: 1;
+}
+
+.programs-stats .stat-card i {
+  font-size: 3rem;
+  color: #ff9900;
+  margin-bottom: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.programs-stats .stat-card:hover i {
+  transform: scale(1.1);
+}
+
+.programs-stats .stat-card h3 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.programs-stats .stat-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive Design for Programs Stats */
+@media (max-width: 768px) {
+  .programs-overview {
+    padding: 60px 0;
+  }
+  
+  .programs-overview .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .programs-overview .section-header p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  
+  .programs-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .programs-stats .stat-card {
+    padding: 30px 20px;
+  }
+  
+  .programs-stats .stat-card i {
+    font-size: 2.5rem;
+  }
+  
+  .programs-stats .stat-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .programs-stats .stat-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-overview .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .programs-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .programs-stats .stat-card {
+    padding: 25px 15px;
+  }
+  
+  .programs-stats .stat-card i {
+    font-size: 2rem;
+  }
+  
+  .programs-stats .stat-card h3 {
+    font-size: 1.3rem;
+  }
+}
 /* Infrastructure Section */
 .infrastructure {
   padding: 80px 0;
