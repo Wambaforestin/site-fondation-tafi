@@ -2557,3 +2557,176 @@
       margin: 5px 0;
     }
   }
+  
+  /* =================================================================
+   7. ADMISSION PAGE STYLES - Contact CTA Section
+   ================================================================= */
+
+/* Admission CTA Section */
+.admission-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #003366 0%, #004080 100%);
+  color: white;
+  text-align: center;
+}
+
+.admission-cta .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.admission-cta .cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.admission-cta .cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.admission-cta .cta-content h2 .highlight {
+  color: #ff9900;
+}
+
+.admission-cta .cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.admission-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.admission-cta .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.admission-cta .btn-cta.primary {
+  background: linear-gradient(135deg, #ff9900, #ffb347);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.admission-cta .btn-cta.primary:hover {
+  background: linear-gradient(135deg, #ffb347, #ffc966);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,153,0,0.3);
+}
+
+.admission-cta .btn-cta.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.admission-cta .btn-cta.secondary:hover {
+  background: white;
+  color: #003366;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+}
+
+.contact-quick {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.quick-contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.quick-contact:hover {
+  opacity: 1;
+}
+
+.quick-contact i {
+  color: #ff9900;
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+.quick-contact span {
+  font-weight: 500;
+}
+
+/* Responsive styles for Admission CTA */
+@media (max-width: 768px) {
+  .admission-cta {
+    padding: 60px 0;
+  }
+  
+  .admission-cta .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .admission-cta .cta-content p {
+    font-size: 1rem;
+  }
+  
+  .admission-cta .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .admission-cta .btn-cta {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .contact-quick {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-cta .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .admission-cta .cta-content p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-quick {
+    gap: 15px;
+  }
+  
+  .quick-contact {
+    font-size: 0.9rem;
+  }
+}
