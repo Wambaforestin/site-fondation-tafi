@@ -4521,3 +4521,512 @@
     font-size: 1.8rem;
   }
 }
+
+/* =================================================================
+   10. PAYMENT PAGE STYLES
+   ================================================================= */
+
+/* Security Warning Section */
+.security-warning {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.warning-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  border-left: 6px solid #dc3545;
+}
+
+.warning-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #dc3545, #e74c3c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.warning-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.warning-content h3 {
+  color: #dc3545;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.warning-content p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.security-rules {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-rules li {
+  padding: 8px 0;
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Payment Main Section */
+.payment-main {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.payment-section {
+  margin-bottom: 80px;
+}
+
+.payment-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Pricing Table */
+.pricing-table {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+.pricing-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pricing-table th {
+  background: linear-gradient(135deg, #003366, #004080);
+  color: white;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+}
+
+.pricing-table th i {
+  margin-right: 8px;
+  color: #ff9900;
+}
+
+.pricing-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.pricing-table td strong {
+  color: #003366;
+  font-size: 1.1rem;
+}
+
+.pricing-table .highlight-row {
+  background: linear-gradient(135deg, rgba(255,153,0,0.05), rgba(255,153,0,0.1));
+}
+
+.pricing-table .highlight-row td {
+  border-bottom-color: #ff9900;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.payment-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #f0f0f0;
+  position: relative;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #ff9900;
+}
+
+.payment-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.payment-card:hover .payment-icon {
+  transform: scale(1.1);
+}
+
+.payment-icon.orange {
+  background: linear-gradient(135deg, #ff6600, #ff8533);
+}
+
+.payment-icon.yellow {
+  background: linear-gradient(135deg, #ffcc00, #ffd633);
+}
+
+.payment-icon.blue {
+  background: linear-gradient(135deg, #003366, #004080);
+}
+
+.payment-icon.green {
+  background: linear-gradient(135deg, #28a745, #34ce57);
+}
+
+.payment-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.payment-card h3 {
+  color: #003366;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.payment-number {
+  background: #f8f9fa;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #e9ecef;
+}
+
+.payment-number i {
+  color: #ff9900;
+}
+
+.payment-number span {
+  color: #003366;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.payment-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.payment-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #28a745;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.payment-status i {
+  color: #28a745;
+}
+
+/* Contact Methods */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #f0f0f0;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #ff9900;
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #ff9900, #ffb347);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.contact-card h3 {
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #003366, #004080);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #004080, #0066cc);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,51,102,0.3);
+}
+
+/* Payment Instructions */
+.payment-instructions {
+  padding: 80px 0;
+  background: white;
+}
+
+.instructions-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-left: 6px solid #ff9900;
+}
+
+.instructions-card h3 {
+  color: #003366;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.instructions-card h3 i {
+  color: #ff9900;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: background 0.3s ease;
+}
+
+.step-item:hover {
+  background: #e9ecef;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff9900, #ffb347);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.step-content p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Gratitude Section */
+.gratitude-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.gratitude-card {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-top: 6px solid #28a745;
+}
+
+.gratitude-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #28a745, #34ce57);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.gratitude-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.gratitude-card h3 {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.gratitude-card p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Payment Page Responsive Design */
+@media (max-width: 768px) {
+  .warning-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 25px;
+  }
+  
+  .warning-icon {
+    margin: 0 auto 20px;
+  }
+  
+  .payment-methods,
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .step-item {
+    padding: 15px;
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .instructions-card,
+  .gratitude-card {
+    padding: 30px 25px;
+  }
+  
+  .payment-card,
+  .contact-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .warning-card {
+    padding: 25px 20px;
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .payment-card,
+  .contact-card {
+    padding: 20px 15px;
+  }
+  
+  .step-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+  
+  .step-number {
+    margin: 0 auto 15px;
+  }
+  
+  .instructions-card,
+  .gratitude-card {
+    padding: 25px 20px;
+  }
+}

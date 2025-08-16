@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Paiement de la Pension - Fondation TAFI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement de la Pension - Fondation TAFI Academy</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -36,207 +37,260 @@
       </nav>
     </div>
   </header>
-  
-  <section class="container">
-    <style>
-      :root {
-        --bleu: #145DA0;
-        --gris-clair: #f9f9f9;
-        --gris-texte: #444;
-      }
 
-      body {
-        font-family: Arial, sans-serif;
-        background: var(--gris-clair);
-        color: #222;
-        margin: 0;
-        padding: 15px;
-      }
-
-      h1, h2, h3 {
-        color: var(--bleu);
-        text-align: center;
-      }
-
-      section {
-        background: #fff;
-        padding: 20px;
-        margin: 15px auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      max-width: 800px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: left;
-      font-size: 0.95rem;
-    }
-
-    th {
-      background-color: var(--bleu);
-      color: #fff;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: var(--bleu);
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #0f467d;
-    }
-
-    a.button-link {
-      display: block;
-      text-align: center;
-      margin: 20px auto;
-      background-color: var(--bleu);
-      color: white;
-      padding: 12px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-
-    .contact {
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    .contact a {
-      color: #25D366;
-      font-weight: bold;
-    }
-
-    .message {
-      font-style: italic;
-      color: var(--gris-texte);
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      th, td {
-        font-size: 0.85rem;
-      }
-
-      input, button {
-        font-size: 0.95rem;
-      }
-
-      a.button-link {
-        font-size: 1rem;
-        padding: 12px 20px;
-      }
-    }
-  </style>
-
-  <section class="container">
-    <h1>💳 Payer la Pension</h1>
-
-  <section>
-    <h2>💰 Tarifs</h2>
-    <table>
-      <tr>
-        <th>Niveau</th>
-        <th>Type</th>
-        <th>Montant</th>
-      </tr>
-      <tr>
-        <td>Maternelle</td>
-        <td>Externe</td>
-        <td>100 000 FCFA / trimestre</td>
-      </tr>
-      <tr>
-        <td>Primaire</td>
-        <td>Externe</td>
-        <td>120 000 FCFA / trimestre</td>
-      </tr>
-      <tr>
-        <td>Collège</td>
-        <td>Externe</td>
-        <td>150 000 FCFA / trimestre</td>
-      </tr>
-      <tr>
-        <td>Internat</td>
-        <td>Hébergement + Pension</td>
-        <td>80 000 FCFA / mois</td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Formulaire de paiement</h2>
-    <form action="traitement-paiement.php" method="POST">
-      <label for="nom">Nom de l’élève :</label>
-      <input type="text" name="nom" id="nom" required>
-
-      <label for="classe">Classe :</label>
-      <input type="text" name="classe" id="classe" required>
-
-      <label for="montant">Montant à payer :</label>
-      <input type="number" name="montant" id="montant" required>
-
-      <button type="submit">Envoyer les informations de l'élève</button>
-    </form>
-  </section>
-
-
-  <section>
-    <h2>📩 Confirmer votre paiement</h2>
-    <div class="contact">
-      <p>📱 WhatsApp : <a href="https://wa.me/+237699972444">Écrivez-nous ici</a></p>
-      <p>✉ Email : fondationtafi@exemple.com</p>
+  <!-- Page Hero Section -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('images/photo48.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="page-title">
+        <span class="highlight">Paiement de la Pension</span>
+        <span class="main-text">Effectuez vos paiements en toute sécurité</span>
+      </h1>
+      <p class="page-subtitle">
+        Dans le cadre de notre engagement pour une éducation de qualité, nous vous offrons des options de paiement flexibles et sécurisées.
+      </p>
     </div>
   </section>
-  <p class="message">🙏 Merci de votre confiance. Chaque paiement soutient notre mission éducative et sportive auprès des jeunes.</p>
 
-    
-    <h2>Paiement de la Pension</h2>
-    <p>Veuillez choisir un mode de paiement :</p>
-
-    <div class="payment-options">
-      <div class="payment-method">
-        <img src="images/orange-money.png" alt="Orange Money">
-        <h3>Payer avec Orange Money</h3>
-        <p>Numéro : 6 99 00 00 00</p>
+  <!-- Security Warning -->
+  <section class="security-warning">
+    <div class="container">
+      <div class="warning-card">
+        <div class="warning-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="warning-content">
+          <h3><i class="fas fa-exclamation-triangle"></i> Important - Sécurité des Paiements</h3>
+          <p><strong>⚠️ ATTENTION :</strong> Seuls le personnel autorisé ou l'administration de l'école peuvent vous donner l'autorisation d'effectuer des paiements en ligne.</p>
+          <ul class="security-rules">
+            <li>✅ Contactez toujours l'administration avant tout paiement</li>
+            <li>✅ Vérifiez l'authenticité des numéros de paiement</li>
+            <li>✅ Conservez tous vos justificatifs de paiement</li>
+            <li>❌ Ne payez jamais sans autorisation officielle</li>
+          </ul>
+        </div>
       </div>
-      <div class="payment-method">
-        <img src="images/mtn-money.png" alt="MTN Mobile Money">
-        <h3>Payer avec MTN MoMo</h3>
-        <p>Numéro : 6 70 00 00 00</p>
+    </div>
+  </section>
+
+  <!-- Payment Main Content -->
+  <section class="payment-main">
+    <div class="container">
+      
+      <!-- Pricing Table -->
+      <div class="payment-section">
+        <div class="section-header">
+          <h2><i class="fas fa-money-bill-wave"></i> Grille <span class="highlight">Tarifaire</span></h2>
+          <p>Découvrez nos tarifs transparents pour chaque niveau</p>
+        </div>
+
+        <div class="pricing-table">
+          <table>
+            <thead>
+              <tr>
+                <th><i class="fas fa-graduation-cap"></i> Niveau</th>
+                <th><i class="fas fa-home"></i> Type</th>
+                <th><i class="fas fa-tags"></i> Montant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maternelle</td>
+                <td>Externe</td>
+                <td><strong>100 000 FCFA</strong> / trimestre</td>
+              </tr>
+              <tr>
+                <td>Primaire</td>
+                <td>Externe</td>
+                <td><strong>120 000 FCFA</strong> / trimestre</td>
+              </tr>
+              <tr>
+                <td>Collège</td>
+                <td>Externe</td>
+                <td><strong>150 000 FCFA</strong> / trimestre</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>Internat</td>
+                <td>Hébergement + Pension</td>
+                <td><strong>80 000 FCFA</strong> / mois</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="payment-section">
+        <div class="section-header">
+          <h2><i class="fas fa-credit-card"></i> Modes de <span class="highlight">Paiement</span></h2>
+          <p>Choisissez votre méthode de paiement préférée</p>
+        </div>
+
+        <div class="payment-methods">
+          <div class="payment-card">
+            <div class="payment-icon orange">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Orange Money</h3>
+            <div class="payment-number">
+              <i class="fas fa-phone"></i>
+              <span>6 99 XX XX XX</span>
+            </div>
+            <p>Paiement sécurisé via Orange Money</p>
+            <div class="payment-status">
+              <i class="fas fa-check-circle"></i>
+              Disponible
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-icon yellow">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>MTN Mobile Money</h3>
+            <div class="payment-number">
+              <i class="fas fa-phone"></i>
+              <span>6 70 XX XX XX</span>
+            </div>
+            <p>Paiement sécurisé via MTN MoMo</p>
+            <div class="payment-status">
+              <i class="fas fa-check-circle"></i>
+              Disponible
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-icon blue">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Virement Bancaire</h3>
+            <div class="payment-number">
+              <i class="fas fa-building"></i>
+              <span>Contactez-nous</span>
+            </div>
+            <p>Paiement par virement bancaire</p>
+            <div class="payment-status">
+              <i class="fas fa-check-circle"></i>
+              Disponible
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-icon green">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Paiement Direct</h3>
+            <div class="payment-number">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>À l'école</span>
+            </div>
+            <p>Paiement en espèces à l'établissement</p>
+            <div class="payment-status">
+              <i class="fas fa-check-circle"></i>
+              Disponible
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact for Payment -->
+      <div class="payment-section">
+        <div class="section-header">
+          <h2><i class="fas fa-headset"></i> Confirmer votre <span class="highlight">Paiement</span></h2>
+          <p>Contactez notre équipe pour autoriser et confirmer votre paiement</p>
+        </div>
+
+        <div class="contact-methods">
+          <div class="contact-card primary">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Service client rapide</p>
+            <a href="https://wa.me/+237699972444" class="contact-btn">
+              <i class="fab fa-whatsapp"></i>
+              Nous écrire
+            </a>
+          </div>
+
+          <div class="contact-card secondary">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>Support administratif</p>
+            <a href="mailto:fondationtafi@exemple.com" class="contact-btn">
+              <i class="fas fa-envelope"></i>
+              Envoyer un email
+            </a>
+          </div>
+
+          <div class="contact-card tertiary">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Téléphone</h3>
+            <p>Appelez directement</p>
+            <a href="tel:+237XXXXXXXX" class="contact-btn">
+              <i class="fas fa-phone"></i>
+              Appeler
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Payment Instructions -->
+  <section class="payment-instructions">
+    <div class="container">
+      <div class="instructions-card">
+        <h3><i class="fas fa-clipboard-list"></i> Procédure de Paiement</h3>
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Contactez l'Administration</h4>
+              <p>Obtenez l'autorisation officielle de paiement</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Vérifiez les Informations</h4>
+              <p>Confirmez le montant et les numéros de paiement</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Effectuez le Paiement</h4>
+              <p>Procédez au paiement via la méthode choisie</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Envoyez la Preuve</h4>
+              <p>Transmettez le justificatif à l'administration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gratitude Message -->
+  <section class="gratitude-section">
+    <div class="container">
+      <div class="gratitude-card">
+        <div class="gratitude-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Merci de votre Confiance</h3>
+        <p>Chaque paiement soutient notre mission éducative et sportive auprès des jeunes. Nous nous engageons à offrir la meilleure formation possible à vos enfants.</p>
       </div>
     </div>
   </section>
@@ -244,7 +298,7 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-       <div class="footer-logo">
+        <div class="footer-logo">
           <img src="images/logo.png.jpg" alt="Logo Fondation TAFI" onerror="this.style.display='none'">
           <h4>Fondation TAFI</h4>
         </div>
