@@ -1243,6 +1243,49 @@
     width: 16px;
     flex-shrink: 0;
   }
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.programs-grid .program-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #f0f0f0;
+}
+
+.programs-grid .program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.programs-grid .program-card i {
+  font-size: 2.5rem;
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+.programs-grid .program-card h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.programs-grid .program-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
   
 /* =================================================================
    PROGRAMS PAGE - Excellence à tous les niveaux Section
