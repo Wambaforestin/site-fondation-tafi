@@ -13,7 +13,7 @@ La **Fondation TAFI Academy** est une école dédiée au développement des jeun
 
 ### Informations de l'Organisation
 
-- **Type**: Organisation à but non lucratif
+- **Type**: Un établissement d'enseignement
 - **Spécialité**: Centre de formation sport et études
 - **Localisation**: Rue de la CAF, Mbankomo, Yaoundé, Cameroun
 - **Mission**: Accompagner les jeunes dans leur parcours académique et sportif vers l'excellence
