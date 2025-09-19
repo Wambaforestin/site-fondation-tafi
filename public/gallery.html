@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
   <header>
     <div class="header-content">
@@ -43,14 +41,13 @@
   <!-- Page Hero Section -->
   <section class="page-hero">
     <div class="page-hero-bg" style="background-image: url('images/photo18.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="page-title">
-        <span class="highlight">Galerie Photos</span>
-      </h1>
-      <p class="page-subtitle">
-        Découvrez la vie quotidienne et les moments forts de notre établissement
-      </p>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1>Galerie Photos</h1>
+      <p>Découvrez la vie quotidienne et les moments forts de notre établissement</p>
+      <nav class="breadcrumb">
+        <a href="index.html">Accueil</a> > <span>Galerie</span>
+      </nav>
     </div>
   </section>
 
@@ -110,6 +107,10 @@
         <button class="filter-btn" data-filter="daily">
           <i class="fas fa-users"></i>
           Vie quotidienne
+        </button>
+        <button class="filter-btn" data-filter="boursiers">
+          <i class="fas fa-award"></i>
+          Recrues des Boursiers
         </button>
       </div>
 
@@ -276,7 +277,86 @@
           </div>
         </div>
 
-        <!-- Add more photos... -->
+        <!-- Recrues des Boursiers Photos -->
+        <div class="gallery-item" data-category="boursiers">
+          <img src="images/photo61.jpg" alt="Cérémonie d'accueil des boursiers" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <h4>Cérémonie d'Accueil</h4>
+              <p>Accueil des nouveaux boursiers</p>
+              <button class="view-btn" onclick="openLightbox('images/photo61.jpg', 'Cérémonie d\'accueil des boursiers')">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="boursiers">
+          <img src="images/photo62.jpg" alt="Formation des boursiers" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <h4>Formation Spécialisée</h4>
+              <p>Programme d'excellence pour boursiers</p>
+              <button class="view-btn" onclick="openLightbox('images/photo62.jpg', 'Formation des boursiers')">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="boursiers">
+          <img src="images/photo63.jpg" alt="Remise de bourses" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <h4>Remise de Bourses</h4>
+              <p>Cérémonie officielle de bourses</p>
+              <button class="view-btn" onclick="openLightbox('images/photo63.jpg', 'Remise de bourses')">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="boursiers">
+          <img src="images/photo64.jpg" alt="Jeunes talents boursiers" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <h4>Jeunes Talents</h4>
+              <p>Nos recrues prometteuses</p>
+              <button class="view-btn" onclick="openLightbox('images/photo64.jpg', 'Jeunes talents boursiers')">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="boursiers">
+          <img src="images/photo65.jpg" alt="Entraînement des boursiers" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <h4>Entraînement Intensif</h4>
+              <p>Formation sportive des boursiers</p>
+              <button class="view-btn" onclick="openLightbox('images/photo65.jpg', 'Entraînement des boursiers')">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="boursiers">
+          <img src="images/photo66.jpg" alt="Réussite scolaire boursiers" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <h4>Excellence Académique</h4>
+              <p>Réussite de nos boursiers</p>
+              <button class="view-btn" onclick="openLightbox('images/photo66.jpg', 'Réussite scolaire boursiers')">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional existing photos... -->
         <div class="gallery-item" data-category="football">
           <img src="images/photo21.jpg" alt="Action football" loading="lazy">
           <div class="gallery-overlay">
@@ -427,19 +507,19 @@
         <h3>Contact</h3>
         <div class="contact-info">
           <i class="fas fa-map-marker-alt"></i>
-          <p>Cameroun - Région du Centre</p>
+          <p>Yaoundé-Mbankomo,Cameroun</p>
         </div>
         <div class="contact-info">
           <i class="fas fa-phone"></i>
-          <p>+237 XX XX XX XX</p>
+          <p>+237 699972444</p>
         </div>
         <div class="contact-info">
           <i class="fas fa-envelope"></i>
-          <p>contact@fondationtafi.cm</p>
+          <p>cbfondationtafi@gamail.com</p>
         </div>
         <div class="contact-info">
           <i class="fas fa-globe"></i>
-          <p>www.fondationtafi.cm</p>
+          <p>fondation-tafi-cameroun.web.app (à modifier)</p>
         </div>
       </div>
     </div>
@@ -458,5 +538,4 @@
 
   <script src="js/main.js"></script>
 </body>
-
 </html>
