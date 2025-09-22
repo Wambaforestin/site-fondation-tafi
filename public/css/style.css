@@ -5441,3 +5441,207 @@
         text-decoration: underline;
     }
 }
+
+
+/* =================================================================
+   SIMPLE SITEMAP STYLES
+   ================================================================= */
+
+/* Sitemap Sections */
+.sitemap-section {
+    margin-bottom: 40px;
+}
+
+.sitemap-section h2 {
+    color: #003366;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff9900;
+}
+
+/* Sitemap Categories */
+.sitemap-category {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #ff9900;
+}
+
+/* Sitemap Lists */
+.sitemap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-list li {
+    margin-bottom: 12px;
+}
+
+/* Page Links */
+.page-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    border-color: #ff9900;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transform: translateX(5px);
+}
+
+.page-link.current {
+    background: linear-gradient(135deg, rgba(0,51,102,0.1), rgba(0,51,102,0.05));
+    border-color: #003366;
+    position: relative;
+}
+
+.page-link.current::after {
+    content: 'Page actuelle';
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 0.7rem;
+    color: #003366;
+    background: rgba(0,51,102,0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Page Link Icons */
+.page-link > i {
+    color: #ff9900;
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Page Link Content */
+.page-link div {
+    flex: 1;
+}
+
+.page-link strong {
+    display: block;
+    color: #003366;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.page-link p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Site Statistics */
+.site-statistics {
+    background: linear-gradient(135deg, #003366, #004080);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    text-align: center;
+    color: white;
+}
+
+.site-statistics h2 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff9900;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sitemap-category {
+        padding: 15px;
+    }
+    
+    .page-link {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    
+    .page-link > i {
+        font-size: 1.1rem;
+        width: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sitemap-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .page-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+    
+    .page-link > i {
+        align-self: flex-start;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .site-statistics {
+        padding: 25px 15px;
+    }
+}
